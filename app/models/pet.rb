@@ -12,5 +12,14 @@
 #  updated_at :datetime         not null
 #
 class Pet < ApplicationRecord
+  # Relaciones
   belongs_to :user
+
+  # Validaciones
+  validates :name,        presence: true,
+                          uniqueness: true
+  validates :race,        presence: true,
+                          uniqueness: true
+  validates :age,         presence: true,
+                          numericality: { only_integer: true }
 end

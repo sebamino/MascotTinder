@@ -1,27 +1,26 @@
 <div id="<%= dom_id pet %>">
   <p>
+    <strong>Imagen:</strong>
+    <%= pet.image.url %>
+  </p>
+  <p>
     <strong>Name:</strong>
     <%= pet.name %>
   </p>
-
   <p>
     <strong>Race:</strong>
     <%= pet.race %>
   </p>
-
   <p>
     <strong>Age:</strong>
     <%= pet.age %>
   </p>
-
   <p>
     <strong>Gender:</strong>
     <%= pet.gender %>
   </p>
-
   <p>
     <strong>User:</strong>
-    <%= pet.user_id %>
+    <%= pet.user.name %>
   </p>
-
 </div>

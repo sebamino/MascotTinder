@@ -14,6 +14,8 @@
 class Pet < ApplicationRecord
   # Relaciones
   belongs_to :user
+  has_many :images, as: :imageable
+  has_many :matches
 
   # Validaciones
   validates :name,        presence: true,
